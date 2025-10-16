@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>烟台苹果 - 3D 展示</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #f9f3f0;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      position: absolute;
+      top: 20px;
+      text-align: center;
+      color: #d42b2b;
+      font-size: 24px;
+    }
+    model-viewer {
+      width: 90vw;
+      height: 70vh;
+      --poster-color: #ffffff;
+    }
+    .desc {
+      max-width: 80%;
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+      font-size: 16px;
+    }
+  </style>
+  <!-- 引入 Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="header">烟台苹果 · 3D 展示</div>
+  <model-viewer
+    src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Apple/glTF/Apple.gltf"
+    alt="3D 苹果模型"
+    auto-rotate
+    camera-controls
+    touch-action="pan-y"
+    shadow-intensity="1"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+  >
+  </model-viewer>
+  <div class="desc">
+    烟台苹果，皮薄肉脆、汁多味甜，中国国家地理标志产品。
+  </div>
+</body>
+</html>
